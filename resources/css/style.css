@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@200&family=Roboto:wght@300&family=Ubuntu&display=swap');
+
+:root {
+	--primary-color: #057d28;
+  }
+  
+  * {
+	margin: 0;
+	padding: 0;
+  
+	box-sizing: border-box;
+  }
+  
+  body {
+	background-color: #f1f1f1;
+	color: #1a1a1a;
+	font-family: "Ubuntu", sans-serif;
+  }
+  
+  main {
+	display: grid;
+	place-items: center;
+
+	min-height: 100vh;
+	padding: 2em;
+  }
+  
+  .shopping {
+	padding: 2.4em 2em;
+	display: grid;
+	row-gap: 2em;
+	background: white;
+	box-shadow: 2px 0 15px -2px rgba(0, 0, 0, 0.2);
+	border-radius: 12px;
+	min-width: 100vh;
+  }
+  
+  .shopping__title {
+	font-size: 1.8em;
+	font-weight: 800;
+	text-align: center;
+	padding-bottom: 1em;
+	border-bottom: 4px dotted var(--primary-color);
+	color: var(--primary-color);
+  }
+
+  .btn-add {
+	color: #FFF;
+	background-color: var(--primary-color);
+	margin-right: 70vh;
+  }
+
+  .btn-delete {
+	color: #FFF;
+	background-color: #e11111;
+  }
+  
+  .btn-edit {
+	color: #FFF;
+	background-color: #747879;
+	width: 80px;
+  }
+
+  .btn-go {
+	color: #FFF;
+	background-color: #057d28;
+	width: 80px;
+  }
+
+  .shopping__checklist {
+	display: grid;
+	row-gap: 1.6em;
+  
+	list-style-type: none;
+  }
+
+  
+  .shopping__item {
+	display: flex;
+	align-items: center;
+	gap: 0.6em;
+  }
+  
+  .shopping__check {
+	appearance: none;
+	cursor: pointer;
+	margin-top: 1px;
+	padding: 3px;
+	aspect-ratio: 1/1;
+	height: 1.2em;
+	border: 1px solid var(--primary-color);
+	border-radius: 4px;
+  }
+  
+  .shopping__label {
+	user-select: none;
+	cursor: pointer;
+	
+	flex-grow: 1;
+  }
+  
+  .shopping__check:checked {
+	background: var(--primary-color);
+	background-clip: content-box;
+	
+	opacity: 0.4;
+  }
+  
+  .shopping__check:checked + .shopping__label {
+	text-decoration:
+	   line-through var(--primary-color) 2px;
+	
+	opacity: 0.4;
+  }
